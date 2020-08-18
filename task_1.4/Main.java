@@ -1,6 +1,7 @@
 /* Дана переменная number.
 Напиши программу, которая выводит на экран квадрат этой переменной (number * number). */
 
+/* Ответ */
 public class Main {
     public static int number = 25;
 
