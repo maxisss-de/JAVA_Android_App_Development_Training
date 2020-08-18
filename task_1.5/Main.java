@@ -12,10 +12,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите температуры в градусах ТС = ");
+        System.out.print ("Введите значение температуры в градусах ТС = ");
         float cels = scanner.nextFloat();
-        System.out.println("Вы ввели "+cels+" градусов по ТС");
+        System.out.println ("Вы ввели "+cels+" градусов по ТС");
         float frg = (9*cels/5 + 32);
-        System.out.println("Вывод это " + frg + " градусов по Фаренгейту FT");
+        System.out.println ("Вывод это " + frg + " градусов по Фаренгейту FT");
     }
 }
