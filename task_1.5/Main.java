@@ -15,7 +15,7 @@ public class Main {
         System.out.print ("Введите значение температуры в градусах ТС = ");
         float cels = scanner.nextFloat();
         System.out.println ("Вы ввели "+cels+" градусов по ТС");
-        float frg = (9*cels/5 + 32);
-        System.out.println ("Вывод это " + frg + " градусов по Фаренгейту FT");
+        float fm = (9*cels/5 + 32);
+        System.out.println ("Вывод это " + fm + " градусов по Фаренгейту FT");
     }
 }
