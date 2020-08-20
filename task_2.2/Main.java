@@ -13,9 +13,7 @@
 •	Метод min(a, b, c, d) должен возвращать минимальное значение из чисел a, b, c, d.
 */
 
-/*
-Ответ
-*/
+/* Ответ */
 
 public class Main {
     public static int min(int a, int b, int c, int d) {
