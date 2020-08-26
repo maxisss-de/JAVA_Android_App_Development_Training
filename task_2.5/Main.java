@@ -13,6 +13,7 @@
 
 
 /*Ответ */
+
 public class Main {
     public static void main(String[] args) {
         String[] proverb = new String[]{"Мама", "Мыла", "Раму"};
