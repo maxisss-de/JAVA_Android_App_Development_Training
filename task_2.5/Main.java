@@ -18,10 +18,10 @@ public class Main {
     public static void main(String[] args) {
         String[] proverb = new String[]{"Мама", "Мыла", "Раму"};
         int www = proverb.length;
-        for (int a = 0; a < www; a++) {
-            for (int b = 0; b < www; b++) {
-                for (int c = 0; c < www; c++) {
-                    if ((a != b) && (b != c) && (a != c)) System.out.println(proverb[a] + proverb[b] + proverb[c]);
+        for (int i = 0; i < www; i++) {
+            for (int j = 0; j < www; j++) {
+                for (int k = 0; k < www; k++) {
+                    if ((i != j) && (j != k) && (i != k)) System.out.println(proverb[i] + proverb[j] + proverb[k]);
                 }
             }
         }
