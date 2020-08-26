@@ -13,22 +13,19 @@
 •	Метод min(a, b, c, d) должен возвращать минимальное значение из чисел a, b, c, d.
 */
 
-/* Исправить*/ 
 /* Ответ */
 
 public class Main {
     public static int min(int a, int b, int c, int d) {
-        if (min(a,b) < min(c, d))
-        if (min (a,b) == min(c,d))
-        {return min(c, d);}
-        {return min(a, b);}
+        if (min(a,b) < min(c, d)) return min(a, b);
+        if (min(a,b) == min(c, d)) return min(a, b);
+        return min(c, d);
     }
 
     public static int min(int a, int b) {
-        if (a < b)
-        if (a == b)
-        {return a;}
-        {return b;}
+        if (a < b) return a;
+        if (a==b) return a;
+        return b;
     }
 
     public static void main(String[] args) throws Exception {
