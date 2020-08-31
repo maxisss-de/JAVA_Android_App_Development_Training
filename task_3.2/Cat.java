@@ -9,7 +9,7 @@
 
 /* Ответ */
 
-class Cat {
+class Cat {                                   /* public class Cat - почему-то он не работает  */
     private String name = "безымянный кот";
 
     public void setName(String name) {
