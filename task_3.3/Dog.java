@@ -11,36 +11,36 @@
 •	У класса должен быть геттер для переменной age.
 */
 
-/* Ещё делаю */
+/* Ответ */
 
 class Dog {
     public static void main(String[] args) {
-        Dog2 bolder = new Dog2 ("Болдер",15);
-        bolder.setInfoAboutDog();
+        Dog bolder = new Dog("Болдер", 15);
+        System.out.println ("Имя собаки "+bolder.getName()+", её возраст: "+ bolder.getAge());
     }
-}
-class Dog2 {
+
     private String name;
     private int age;
 
-    public Dog2 (String name, int age){
+    public Dog(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public String getName(){return this.name;}
-    public void setName(String name){
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getAge(){return this.age;}
-    public void setAge (String age){
-        this.age = age;
+    public int getAge() {
+        return this.age;
     }
 
-
-    void setInfoAboutDog(); {
-        System.out.println ("Собаку зовут "+this.name+" ей "+this.age+" лет.");
+    public void setAge(int age) {
+        this.age = age;
     }
 
 }
