@@ -15,7 +15,7 @@
 
 class Dog {
     public static void main(String[] args) {
-        Dog2 bolder = new Dog2 ("Болдер","15");
+        Dog2 bolder = new Dog2 ("Болдер",15);
         bolder.setInfoAboutDog();
     }
 }
@@ -40,7 +40,7 @@ class Dog2 {
 
 
     void setInfoAboutDog(); {
-        System.out.println ("Собаку зовут "+name+" ей "+age+" лет.");
+        System.out.println ("Собаку зовут "+this.name+" ей "+this.age+" лет.");
     }
 
 }
