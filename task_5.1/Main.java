@@ -26,7 +26,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // Создали объект reader класса BufferedReader
         List<String> list = new ArrayList<>(); // Создали коллекцию list с элементами типа строка
-        System.out.println("Введите Город и нажмите Enter, затем введите Фамилию и нажмите Enter");
         while (true) {
             String family = reader.readLine(); // Cоздали строковую переменную family и приняли значение family через метод объекта reader класса BufferedReader
             if (family.isEmpty()) {
@@ -42,8 +41,7 @@ public class Main {
                 break;
             }
             else if (i==list.size()-1)
-                System.out.println("В этом городе никто не живёт");
+                System.out.println("Поиск не дал результатов");
         }
     }
 }
-
