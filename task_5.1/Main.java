@@ -22,30 +22,26 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-/* 
-Модернизация ПО
-*/
-
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        List<String> list = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // Создали объект reader класса BufferedReader
+        List<String> list = new ArrayList<>(); // Создали коллекцию list с элементами типа строка
         while (true) {
-            String family = reader.readLine();
+            String family = reader.readLine(); // Cоздали строковую переменную family и приняли значение family через метод объекта reader класса BufferedReader
             if (family.isEmpty()) {
                 break;
             }
-
-            list.add(family);
+            list.add(family); // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1).
         }
-
-        // Read the house number
-        int houseNumber = Integer.parseInt(reader.readLine());
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
+        String city = reader.readLine();
+        for (int i=0; i<list.size(); i++) {
+            if (list.get(i).equals(city)) {
+                String familyName = list.get(i+1);
+                System.out.println(familyName);
+                break;
+            }
+            else if (i==list.size()-1)
+                System.out.println("В этом городе никто не живёт");
         }
     }
 }
