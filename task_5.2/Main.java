@@ -35,7 +35,7 @@ public class Main {
         int h = scanner.nextInt();
         int i = scanner.nextInt();
         System.out.println ("Вы ввели "+b+c+d+e+f+g+h+i+" значение");
-        int a = ;
+        int a = ; /* Подумать....  */
         if((a%2)==0){
                 System.out.println("Число "+b+c+d+e+f+g+h+i+" четное ");
             }
