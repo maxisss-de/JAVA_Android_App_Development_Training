@@ -3,3 +3,8 @@
 */
 
 /* В разработке */
+
+package sample;
+
+public class Controller {
+}
