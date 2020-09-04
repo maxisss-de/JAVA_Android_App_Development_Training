@@ -13,11 +13,25 @@
 8888888888
 */
 
-/* Исправить */
-/* Тут нужен только один цикл */
-
+/* Исправил ответ*/
 
 public class Main {
+    public static void main(String[] args) {
+        String eights = "8888888888";
+        char[] acht10 = new char[10];
+        for (int i = 1; i<=10;i++) {
+            eights.getChars(0, i, acht10, 0);
+            System.out.println(acht10);
+        }
+    }
+}
+
+
+
+
+/* Мемориал */
+
+/* public class Main {
 
     public static void main(String[] args) {
         for (int i = 8; i < 9; i++) {
@@ -143,3 +157,4 @@ public class Main {
         }
     }
 }
+ */
