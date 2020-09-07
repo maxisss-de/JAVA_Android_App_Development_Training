@@ -1,3 +1,8 @@
+/* Задание: Сделать кнопку "НЕТ", чтобы на экране показывалось уведомление неправильно*/
+
+
+/* Ответ */
+
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
