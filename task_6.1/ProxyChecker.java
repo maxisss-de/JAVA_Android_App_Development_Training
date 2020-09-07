@@ -2,7 +2,7 @@
 Задание: подключаем ip двумя способами, один через Run второй через Аноним
 */
 
-/* В разработке */
+/* Ответ */
 
 
 import java.io.FileReader;
@@ -13,9 +13,9 @@ import java.util.Arrays;
 
 public class ProxyChecker {
     public static void main(String[] args) throws Exception {
-        System.out.println("Программа сканирования списка адресов Прокси-серверов на предмет их доступности.");
-        System.out.println("Данные по адресам прокси-серверов будут считываться с файла C:/Program Files/java/ip.txt");
-        System.out.println("Читаем файл с адресами и запускаем опрос Прокси-серверов.");
+        System.out.println("Сканирования Прокси-серверов на предмет их доступности.");
+        System.out.println("Данные прокси-серверов будут считываться с файла C:/Program Files/java/ip.txt");
+        System.out.println("Читаем файл с адресами");
         FileReader reader = new FileReader("C:/Program Files/java/ip.txt");
         int c;
         String ipList = "";
