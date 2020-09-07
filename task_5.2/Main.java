@@ -18,57 +18,62 @@
 10
 */
 
-/* Делаю  */
+/* Ответ  */
 
-import java.io.FileReader;
+import java.io.*;
+import java.util.ArrayList;
+import java.lang.Integer;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        FileReader reader = new FileReader("C:/Program Files/java/test.txt");
-        int c;
-        String document = "";
-        while ((c=reader.read())!=-1){
-            document += (char)c;
-        }
-        System.out.println("Вы выбрали числа:");
-        System.out.println(document);
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
         
-        int i = Integer.parseInt(document.trim());
-
-
-        if((i%2)==0){
-            System.out.println("Числа "+i+" чётные ");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        ArrayList<Integer> data = new ArrayList<>();
+        File topcat = new File(new File(".").getCanonicalPath());
+        String fromAtoZ;
+        System.out.println("Укажите полный путь к файлу где содержатся целые числа на каждой строке");
+        System.out.println("или название файла из директории "+ topcat.getCanonicalPath());
+        String nametopcat = scanner.nextLine();
+        if (nametopcat.indexOf(':')>0) fromAtoZ = nametopcat;
+        else {
+            System.out.println("Вы ввели " + nametopcat);
+            fromAtoZ = topcat.getCanonicalPath() + (char) 92 + nametopcat;
         }
+        System.out.println("Ищем файл по адресу " + fromAtoZ);
+        FileInputStream finput = new FileInputStream(fromAtoZ);
+
+        int k=-1;
+        int csl = 0;
+        String bufferInt="";
+        do {
+            k=finput.read();
+            if ((k!=13)&(k!=10)&(k!=-1)) {
+                bufferInt+=((char)k);
+            }
+            else if (bufferInt!=""){
+                System.out.println("Число считано : " + bufferInt);
+                csl = Integer.parseInt(bufferInt);
+                data.add(csl);
+                bufferInt="";
+            }
+        } while (k!=-1);
+
+        System.out.println("Числа загружены :"+data);
+        finput.close();
+        System.out.println("Сортировка и поиск четных чисел");
+        Collections.sort(data);
+        System.out.println("Числа отсортированы по возростанию :"+data);
+        int count2=0;
+        for (int i=0; i<(data.size()); i++) {
+            if ((data.get(i))%2==0) {
+                System.out.println("Обнаружено чётное число:  " + data.get(i));
+                count2++;
+            }
+        }
+        if (count2==0) System.out.println("Чётные числа не обнаружены");
+        System.out.println("Конец программы.");
     }
 }
-
-
-
-
-
-// import java.util.Scanner;
-
-// public class Main {
-//     public static void main(String[] args) {
-//         Scanner scanner = new Scanner(System.in);
-//         System.out.print ("Введите значение");
-//         int b = scanner.nextInt();
-//         int c = scanner.nextInt();
-//         int d = scanner.nextInt();
-//         int e = scanner.nextInt();
-//         int f = scanner.nextInt();
-//         int g = scanner.nextInt();
-//         int h = scanner.nextInt();
-//         int i = scanner.nextInt();
-//         System.out.println ("Вы ввели "+b+c+d+e+f+g+h+i+" значение");
-//         int a = ; /* Подумать....  */
-//         if((a%2)==0){
-//                 System.out.println("Число "+b+c+d+e+f+g+h+i+" четное ");
-//             }
-//         else{
-//             if((a%1)==0){
-//                 System.out.println("Число "+b+c+d+e+f+g+h+i+" нечетное ");
-//             }
-//         }
-//     }
-// }
