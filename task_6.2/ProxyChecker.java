@@ -2,7 +2,7 @@
 Задание, мы ip подключаем двумя способами, один через Run второй через аноним
 */
 
-/* В разработке */
+/* Ответ */
 
 import java.io.FileReader;
 import java.io.InputStream;
