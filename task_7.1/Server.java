@@ -2,9 +2,8 @@
 Задание: сделать чат
 */
 
-/* В разработке */
+/* Ответ */
 
-// package server;
 import jdk.net.Sockets;
 
 import java.io.DataInputStream;
@@ -61,7 +60,7 @@ public class Server {
                             while (true){
                                 String str = in.readUTF();
                                 Date date2 = new Date();
-                                System.out.println(color[4] + "Клиент "+ name + " в (" + date2 + ") прислал(-а) сообщение: "+color[2]+ str); // - Выводим сообщение клиента в консоль сервера
+                                System.out.println(color[4] + "Клиент "+ name + " в (" + date2 + ") прислал(-а) сообщение: "+color[2]+ str);
                                 str=name + " в (" + date2 + ") : " +str;
                                 broadcastMsg(str);
                             }
