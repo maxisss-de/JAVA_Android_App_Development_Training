@@ -2,9 +2,8 @@
 Задание: сделать чат
 */
 
-/* В разработке */
 
-//package client;
+/* Ответ */
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -26,14 +25,14 @@ public class Client {
                         String response = null;
                         try {
                             response = in.readUTF();
-                            System.out.println(response); // - Печатаем в окно клиента ответы других участников чата?
+                            System.out.println(response);
                         } catch (IOException exception) {
                             exception.printStackTrace();
                         }
                     }
                 }
             });
-            responseThread.start(); // - Запуск в работу ответного многпоточного метода отображающего сообщения пользователей в окно клиента
+            responseThread.start();
             while (true){
                 String str = scanner.nextLine();
                 out.writeUTF(str);
