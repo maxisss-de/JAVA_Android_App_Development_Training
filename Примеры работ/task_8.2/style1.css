@@ -1,0 +1,27 @@
+.blue-hbox{
+    -fx-background-color: red;
+  /*  -fx-font-color: blue;*/
+    -fx-color: green;
+}
+
+
+
+/*.button{
+    -fx-color: green;
+}*/
+
+.red-button{
+    /*-fx-color: yellov; /* цвает кнопки*/
+    -fx-border-width: 1px;     /*ширина рамки вокруг кнопки*/
+    -fx-border-color: blue;    /*цвет рамки вокруг кнопки*/
+    -fx-background-color: green;  /*цвет фона кноки */
+    /*-fx-font-size: 1em;  /*размер шрифта*/
+    -fx-text-fill: white ;   /*цвет текста на кнопке*/
+    }
+
+.my-text-area > .scroll-pane > .corner {
+                  -fx-background-color: red;
+                  }
+                  /*{
+    -fx-color: green;
+    -fx-background-color: red; /* Рамка вокруг ТехтArea }*/
