@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<!--        prefHeight="200.0" prefWidth="404.0"-->
+<?import javafx.geometry.Insets?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <children>
+      <HBox alignment="TOP_CENTER" prefHeight="132.0" prefWidth="397.0">
+         <padding>
+            <Insets top="3" bottom="3" left="3" right="3"/>
+         </padding>
+
+         <children>
+            <VBox prefHeight="100.0" prefWidth="56.0">
+               <children>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+               </children></VBox>
+            <VBox prefHeight="134.0" prefWidth="190.0">
+               <children>
+                  <TextArea  prefHeight="132.0" prefWidth="190.0" fx:id="messageWindow"/>
+
+
+               </children></VBox>
+         </children></HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="397.0" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="37.0" prefWidth="142.0">
+               <children>
+                  <TextField prefHeight="36.0" prefWidth="121.0" />
+               </children></VBox>
+            <VBox prefHeight="27.0" prefWidth="106.0">
+               <children>
+                  <Button onAction="#send"  contentDisplay="RIGHT" defaultButton="true" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" text="Отправить" textFill="#2032e8" textOverrun="CENTER_WORD_ELLIPSIS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</GridPane>
