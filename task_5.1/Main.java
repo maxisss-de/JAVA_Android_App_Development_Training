@@ -33,7 +33,7 @@ public class Main {
             if (family.isEmpty()) {
                 break;
             }
-            list.add(family);                                                          // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1).
+            list.add(family);                                                          // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1)
         }
         
         String city = reader.readLine();
