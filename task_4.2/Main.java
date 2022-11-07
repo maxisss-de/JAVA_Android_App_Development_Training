@@ -1,4 +1,6 @@
+// ------------------------------------------------------------------------
 /*
+Задача:
 Создай классы Dog, Cat, Mouse.
 Добавь по три поля в каждый класс, на твой выбор.
 Создай объекты для героев мультика Том и Джерри.
@@ -16,11 +18,10 @@ Mouse jerryMouse = new Mouse("Jerry", 12 , 5),
 •	Должен быть создан хотя бы один объект типа Dog.
 •	Должен быть создан хотя бы один объект типа Cat.
 */
-
-/* Ответ */
-
+// ------------------------------------------------------------------------
 
 public class Main {
+    
     public static void main(String[] args) {
         Dog himalayasDog = new Dog("Гималай",35,7);
         Dog micropDog = new Dog("Микроп",60,3);
@@ -42,30 +43,39 @@ public class Main {
         System.out.println("Привет! Меня зовут: "+sueMouse.name+". Мой вес: "+sueMouse.weight+" кг. Длина моего хвоста: "+sueMouse.tail_size+" см.");
     }
 }
+
 class Dog {
+    
     String name;
     int weight;
     int tail_size;
+    
     public Dog(String name, int weight, int tail_size) {
         this.name = name;
         this.weight = weight;
         this.tail_size = tail_size;
     }
 }
+
 class Cat {
+    
     String name;
     int weight;
     int tail_size;
+    
     public Cat(String name, int weight, int tail_size) {
         this.name = name;
         this.weight = weight;
         this.tail_size = tail_size;
     }
 }
+
 class Mouse {
+    
     String name;
     int weight;
     int tail_size;
+    
     public Mouse(String name, int weight, int tail_size) {
         this.name = name;
         this.weight = weight;
