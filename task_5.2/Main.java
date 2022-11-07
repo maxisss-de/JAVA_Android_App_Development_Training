@@ -1,4 +1,6 @@
+// ------------------------------------------------------------------------
 /* 
+Задача:
 1. Ввести имя файла с консоли.
 2. Прочитать из него набор чисел.
 3. Вывести на консоль только четные, отсортированные по возрастанию.
@@ -17,16 +19,16 @@
 8
 10
 */
+// ------------------------------------------------------------------------
 
-/* Ответ  */
-
-import java.io.*;
+import java.util.Collections;
 import java.util.ArrayList;
 import java.lang.Integer;
-import java.util.Collections;
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
+    
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         
@@ -37,6 +39,7 @@ public class Main {
         System.out.println("Укажите полный путь к файлу где содержатся целые числа на каждой строке");
         System.out.println("или название файла из директории "+ topcat.getCanonicalPath());
         String nametopcat = scanner.nextLine();
+        
         if (nametopcat.indexOf(':')>0) fromAtoZ = nametopcat;
         else {
             System.out.println("Вы ввели " + nametopcat);
@@ -48,6 +51,7 @@ public class Main {
         int k=-1;
         int csl = 0;
         String bufferInt="";
+        
         do {
             k=finput.read();
             if ((k!=13)&(k!=10)&(k!=-1)) {
@@ -60,7 +64,6 @@ public class Main {
                 bufferInt="";
             }
         } while (k!=-1);
-
         System.out.println("Числа загружены :"+data);
         finput.close();
         System.out.println("Сортировка и поиск четных чисел");
