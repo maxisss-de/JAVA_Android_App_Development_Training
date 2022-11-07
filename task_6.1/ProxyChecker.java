@@ -1,17 +1,18 @@
+// ------------------------------------------------------------------------
 /* 
-Задание: подключаем ip двумя способами, один через Run второй через Аноним
+Задание: 
+Подключаем ip двумя способами, один через Run второй через Аноним
 */
+// ------------------------------------------------------------------------
 
-/* Ответ */
-
-
-import java.io.FileReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.*;
+import java.io.InputStream;
+import java.io.FileReader;
 import java.util.Arrays;
+import java.net.*;
 
 public class ProxyChecker {
+    
     public static void main(String[] args) throws Exception {
         System.out.println("Сканирования Прокси-серверов на предмет их доступности.");
         System.out.println("Данные прокси-серверов будут считываться с файла C:/Program Files/java/ip.txt");
@@ -33,17 +34,19 @@ public class ProxyChecker {
     }
 }
 
-class MyRunnableClass implements Runnable{
+class MyRunnableClass implements Runnable {
     String ip;
     int port;
     int i;
+    
     public MyRunnableClass(String ip, int port, int i) {
         this.ip = ip;
         this.port = port;
         this.i = i;
     }
+    
     @Override
-    public void run(){
+    public void run() {
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ip, port));
         try {
             URLConnection connection = new URL("https://vozhzhaev.ru/test.php").openConnection(proxy);
@@ -56,7 +59,7 @@ class MyRunnableClass implements Runnable{
                 sb.append(buffer, 0, rc);
             reader.close();
             System.out.println("Поток - "+i+" - ip: "+ip+":"+port+" - РАБОТАЕТ");
-        }catch (Exception e){
+        } catch (Exception e){
             System.out.println("Поток - "+i+" - ip: "+ip+":"+port+" - не работает");
         }
     }
