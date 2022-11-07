@@ -1,4 +1,6 @@
+// ------------------------------------------------------------------------
 /*
+Задача:
 Перед решением прочтите https://www.codeflow.site/ru/article/java-buffered-reader
 Задача: Программа определяет, какая семья (фамилию) живёт в доме с указанным номером.
 Новая задача: Программа должна работать не с номерами домов, а с городами:
@@ -11,9 +13,9 @@
 Абрамовичи
 Лондон
 Пример вывода:
-Абрамовичи */
-
-/* Ответ */
+Абрамовичи 
+*/
+// ------------------------------------------------------------------------
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // Создали объект reader класса BufferedReader
         List<String> list = new ArrayList<>(); // Создали коллекцию list с элементами типа строка
@@ -32,6 +35,7 @@ public class Main {
             }
             list.add(family); // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1).
         }
+        
         String city = reader.readLine();
         for (int i=0; i<list.size(); i++) {
             if (list.get(i).equals(city)) {
