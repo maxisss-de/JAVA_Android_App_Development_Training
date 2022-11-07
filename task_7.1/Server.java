@@ -1,21 +1,22 @@
+// ------------------------------------------------------------------------
 /* 
-Задание: сделать чат
+Задание: 
+Сделать чат
 */
+// ------------------------------------------------------------------------
 
-/* Ответ */
-
-import jdk.net.Sockets;
-
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.DataInputStream;
 import java.net.ServerSocket;
-import java.net.Socket;
+import java.io.IOException;
 import java.util.ArrayList;
+import jdk.net.Sockets;
+import java.net.Socket;
 import java.util.Date;
 import java.util.List;
 
 class ClientsClass {
+    
     public Socket socket;
     public String name;
     public String color;
@@ -64,14 +65,14 @@ public class Server {
                                 str=name + " в (" + date2 + ") : " +str;
                                 broadcastMsg(str);
                             }
-                        }catch (IOException e){
+                        }catch (IOException e) {
                             e.printStackTrace();
                         }
                     }
                 });
                 thread.start();
             }
-        }catch (IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
