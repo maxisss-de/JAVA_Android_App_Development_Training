@@ -1,16 +1,18 @@
+// ------------------------------------------------------------------------
 /* 
-Задание: подключаем ip двумя способами, один через Run второй через Аноним
+Задание: 
+Подключаем ip двумя способами, один через Run второй через Аноним
 */
+// ------------------------------------------------------------------------
 
-/* Ответ */
-
-import java.io.FileReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.*;
+import java.io.InputStream;
+import java.io.FileReader;
 import java.util.Arrays;
+import java.net.*;
 
 public class ProxyChecker {
+    
     public static void main(String[] args) throws Exception {
         System.out.println("Сканирования Прокси-серверов на предмет их доступности.");
         System.out.println("Данные прокси-серверов будут считываться с файла C:/Program Files/java/ip.txt");
@@ -18,7 +20,7 @@ public class ProxyChecker {
         FileReader reader = new FileReader("C:/Program Files/java/ip.txt");
         int c;
         String ipList = "";
-        while ((c=reader.read())!=-1){
+        while ((c=reader.read())!=-1) {
             ipList += (char)c;
         }
         String[] ipListArray = ipList.split("\r");
@@ -39,7 +41,7 @@ public class ProxyChecker {
                         char[] buffer = new char[256];
                         reader.close();
                         System.out.println("ip: "+ip+":"+port+" - РАБОТАЕТ");
-                    }catch (Exception e){
+                    } catch (Exception e){
                         System.out.println("ip: "+ip+":"+port+" - не работает");
                     }
                 }
