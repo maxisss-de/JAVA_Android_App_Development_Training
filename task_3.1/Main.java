@@ -1,15 +1,17 @@
+// ------------------------------------------------------------------------
 /*
-Задача вывести на экран такое сообщение (для объекта gosha):
+Задача: 
+Вывести на экран такое сообщение (для объекта gosha):
 Меня зовут "имя объекта"
 Имя моей мамы: "имя мамы"
 Имя моего папы: "имя папы"
 У меня две бабушки, бабушка "имя бабушки" и "имя бабушки"
 У меня два деда, деда "имя деда" и "имя деда"
 */
-
-/* Ответ */
+// ------------------------------------------------------------------------
 
 public class Main {
+    
     public static void main(String[] args) {
         Person valera=new Person("Валера","Иванов",69,null,null);
         Person olga = new Person("Ольга","Иванова",67,null,null);
@@ -23,11 +25,10 @@ public class Main {
         System.out.println("Имя моего папы: " +gosha.getFather().getName());
         System.out.println("У меня две бабушки, бабушка "+gosha.getMother().getMother().getName()+" и "+alex.getMother().getName());
         System.out.println("У меня два деда, деда "+eva.getFather().getName()+" и "+alex.getFather().getName());
-
     }
 }
 
-class Person{
+class Person {
     private String name;
     private String lastname;
     private int age;
@@ -44,19 +45,18 @@ class Person{
     public String getName() {
         return this.name;
     }
-    public int getHp(){
+    public int getHp() {
         return this.hp;
     }
-    public Person getMother(){
+    public Person getMother() {
         return this.mother;
     }
 
-    public Person getFather(){
+    public Person getFather() {
         return this.father;
     }
 
-
-    public void setHp(int hp){
+    public void setHp(int hp) {
         if (this.hp+hp>100) this.hp = 100;
         else this.hp = this.hp + hp;
     }
