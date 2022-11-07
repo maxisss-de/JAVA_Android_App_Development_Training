@@ -27,13 +27,13 @@ public class Main {
     
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); // Создали объект reader класса BufferedReader
-        List<String> list = new ArrayList<>(); // Создали коллекцию list с элементами типа строка
+        List<String> list = new ArrayList<>();                                        // Создали коллекцию list с элементами типа строка
         while (true) {
-            String family = reader.readLine(); // Cоздали строковую переменную family и приняли значение family через метод объекта reader класса BufferedReader
+            String family = reader.readLine();                                        // Cоздали строковую переменную family и приняли значение family через метод объекта reader класса BufferedReader
             if (family.isEmpty()) {
                 break;
             }
-            list.add(family); // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1).
+            list.add(family);                                                          // Положили в коллекцию list (2) значение переменной family, принятое в (3) через метод объекта reader, созданного в (1).
         }
         
         String city = reader.readLine();
