@@ -12,6 +12,5 @@ public class Main {
         a = 55;
         b = 60;
         String s = "40";
-
     }
 }
