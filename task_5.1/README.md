@@ -1,6 +1,6 @@
 # Задача:
 
-Перед решением прочтите https://www.codeflow.site/ru/article/java-buffered-reader
+[Перед решением прочтите](https://www.codeflow.site/ru/article/java-buffered-reader) 
 
 Программа определяет, какая семья (фамилию) живёт в доме с указанным номером.
 Новая задача: Программа должна работать не с номерами домов, а с городами:
