@@ -1,7 +1,7 @@
 ### Welcome!
 ### Android app development training
 Here are the tasks and solutions made by me
-### -----------------------------------------------------------------------------------------------
+### ----------------------------------------------------------------------------------------------------
 ### Willkommen!
 ### Schulung zur Entwicklung von Android-Apps
 Hier ist die Aufgabe und Lösung von mir gemacht
