@@ -1,5 +1,6 @@
-# Задача:
+## Задача: "Метод sumDigitsInNumber(int number)"
 
+### Реализация
 Напиши код метода sumDigitsInNumber(int number). 
 
 Метод на вход принимает целое трехзначное число. 
